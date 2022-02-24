@@ -12,15 +12,21 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    const IS_NOT_ADMIN = 0;
+    const IS_ADMIN = 1;
+    const USER_ACTIVE = 1;
+    const USER_UNACTIVE = 0;
+
     /**
-     * The attributes that are mass assignable.
+     * The attributes that are not mass assignable.
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
+    protected $guarded = [
+        'email_verified_at',
+        'is_admin',
+        'is_active',
+        'remember_token'
     ];
 
     /**
