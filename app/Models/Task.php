@@ -11,4 +11,9 @@ class Task extends Model
 
     const TASK_IN_PROGRESS = 0;
     const TASK_COMPLETED = 1;
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }
