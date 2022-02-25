@@ -17,13 +17,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('index');
 
 // Resource route
-Route::resource('tasks', TaskController::class);
+Route::resource('tasks', TaskController::class)->middleware('auth');
 
 // Basic route
-Route::name('users.')->prefix('users')->group(function () {
+Route::name('users.')->prefix('users')->middleware(['auth', 'auth.admin'])->group(function () {
     Route::get('', [UserController::class, 'index'])->name('index');
     Route::post('', [UserController::class, 'store'])->name('store');
     Route::get('create', [UserController::class, 'create'])->name('create');
