@@ -35,3 +35,9 @@ Route::name('users.')->prefix('users')->middleware(['auth', 'auth.admin'])->grou
     Route::delete('{user}', [UserController::class, 'destroy'])->name('destroy');
     Route::get('{user}/edit', [UserController::class, 'edit'])->name('edit');
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__ . '/auth.php';
