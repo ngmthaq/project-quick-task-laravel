@@ -23,7 +23,7 @@ Route::get('/', function () {
 Route::get('/langs/{lang}', [LanguageController::class, 'changeLanguage'])->name('langs.change');
 
 // Resource route
-Route::resource('tasks', TaskController::class)->middleware('auth');
+Route::resource('tasks', TaskController::class)->middleware(['auth', 'auth.admin']);
 
 // Basic route
 Route::name('users.')->prefix('users')->middleware(['auth', 'auth.admin'])->group(function () {
