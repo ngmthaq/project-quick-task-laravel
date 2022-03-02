@@ -1,0 +1,24 @@
+{
+  "name": "quick_task",
+  "description": "",
+  "main": "",
+  "authors": [
+    "ngmthaq <nguyenmanhthang2000.fb@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ngmthaq/quick_task",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "public/bower_components"
+  ],
+  "dependencies": {
+      "bootstrap": "4.6.1",
+      "jquery": "3.6.0",
+      "fontawesome": "5.15.4"
+  }
+}
