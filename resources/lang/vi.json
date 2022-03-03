@@ -1,4 +1,12 @@
 {
+    "No data response": "Không có dữ liệu",
+    "Edit user information": "Thay đổi thông tin người dùng",
+    "Delete this user": "Xác nhận xoá người dùng",
+    "Delete this task": "Xác nhận xoá nhiệm vụ",
+    "Show task": "Thông tin nhiệm vụ",
+    "Edit task": "Chỉnh sửa thông tin nhiệm vụ",
+    "In Progress": "Đang làm",
+    "Completed": "Đã hoàn thành",
     "View tasks": "Xem nhiệm vụ",
     "View user's information": "Xem thông tin người dùng",
     "New user": "Thêm người dùng mới",

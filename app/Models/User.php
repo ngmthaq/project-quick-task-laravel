@@ -18,6 +18,9 @@ class User extends Authenticatable
     const IS_ADMIN = 1;
     const USER_ACTIVE = 1;
     const USER_UNACTIVE = 0;
+    const DB_TABLE = 'users';
+
+    protected $table = self::DB_TABLE;
 
     /**
      * The attributes that are not mass assignable.
@@ -78,6 +81,16 @@ class User extends Authenticatable
     public function setUsernameAttribute($username)
     {
         $this->attributes['username'] = Str::slug($username);
+    }
+
+    public function isAdmin()
+    {
+        return $this->is_admin === self::IS_ADMIN;
+    }
+
+    public function isActive()
+    {
+        return $this->is_active === self::USER_ACTIVE;
     }
 
     public function tasks()
