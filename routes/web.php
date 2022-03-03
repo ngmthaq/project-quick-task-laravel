@@ -23,7 +23,7 @@ Route::get('/', function () {
 Route::get('/langs/{lang}', [LanguageController::class, 'changeLanguage'])->name('langs.change');
 
 // Resource route
-Route::resource('tasks', TaskController::class)->middleware(['auth', 'auth.admin']);
+// Route::resource('tasks', TaskController::class)->middleware(['auth', 'auth.admin']);
 
 // Basic route
 Route::name('users.')->prefix('users')->middleware(['auth', 'auth.admin'])->group(function () {
@@ -34,6 +34,10 @@ Route::name('users.')->prefix('users')->middleware(['auth', 'auth.admin'])->grou
     Route::put('{user}', [UserController::class, 'update'])->name('update');
     Route::delete('{user}', [UserController::class, 'destroy'])->name('destroy');
     Route::get('{user}/edit', [UserController::class, 'edit'])->name('edit');
+
+    Route::prefix('{user}')->group(function () {
+        Route::resource('tasks', TaskController::class);
+    });
 });
 
 Route::get('/dashboard', function () {

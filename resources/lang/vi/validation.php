@@ -120,7 +120,7 @@ return [
     'starts_with' => 'Trường :attribute phải được bắt đầu bằng một trong những giá trị sau: :values',
     'string' => 'Trường :attribute phải là một chuỗi kí tự.',
     'timezone' => 'Trường :attribute phải là một múi giờ hợp lệ.',
-    'unique' => 'Trường :attribute đã có trong cơ sở dữ liệu.',
+    'unique' => 'Trường :attribute đã tồn tại trên hệ thống.',
     'uploaded' => 'Trường :attribute tải lên thất bại.',
     'url' => 'Trường :attribute không giống với định dạng một URL.',
     'uuid' => 'Trường :attribute phải là một chuỗi UUID hợp lệ.',
@@ -162,5 +162,7 @@ return [
         'title' => 'tiêu đề',
         'username' => 'tên đăng nhập',
         'year' => 'năm',
+        'is_admin' => 'phân quyền',
+        'is_active' => 'trạng thái'
     ],
 ];

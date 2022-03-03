@@ -158,6 +158,9 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'is_admin' => 'permission',
+        'is_active' => 'status'
+    ],
 
 ];
